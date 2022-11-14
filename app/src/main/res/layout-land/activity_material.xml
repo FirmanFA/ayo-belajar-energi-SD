@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:theme="@style/ThemeOverlay.AyoBelajarEnergiSD.FullscreenContainer"
+    tools:context=".MainActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:background="@drawable/second_home_background">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_material"
+            android:layout_width="210dp"
+            android:layout_height="0dp"
+            android:background="@drawable/material1_button"
+            android:fontFamily="@font/chewy"
+            android:paddingBottom="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:transitionName="btnMaterial"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="80:19"
+            app:layout_constraintEnd_toStartOf="@+id/btn_quiz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_quiz"
+            android:layout_width="190dp"
+            android:layout_height="0dp"
+            android:background="@drawable/quiz_button"
+            android:fontFamily="@font/chewy"
+            android:paddingBottom="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_material"
+            app:layout_constraintDimensionRatio="112:30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_material"
+            app:layout_constraintTop_toTopOf="@+id/btn_material"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
