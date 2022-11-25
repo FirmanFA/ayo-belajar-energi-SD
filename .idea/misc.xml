@@ -3,14 +3,60 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/drawable/material_content_background.xml" value="0.145" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/drawable/material_content_background1.xml" value="0.2135" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land-v26/fragment_first_material1.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land-v26/fragment_first_material2.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land-v26/fragment_first_material4.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land-v26/fragment_first_material5.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land-v26/fragment_first_material5_part2.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land-v26/fragment_first_material6.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land-v26/fragment_first_material6_part2.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/activity_fullscreen.xml" value="0.1984375" />
         <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/activity_material.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/activity_material1.xml" value="0.2" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/activity_material2.xml" value="0.2359375" />
         <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/activity_video.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material1.xml" value="0.1984375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material2.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material2_part2.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material3.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material4.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material4_part2.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material4_part3.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material5.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material5_part2.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material6.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material6_part2.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material7.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material7_part2.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material7_part3.xml" value="0.2359375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_first_material8.xml" value="0.240625" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout-land/fragment_second_material1.xml" value="0.2359375" />
         <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/activity_fullscreen.xml" value="0.1953125" />
         <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/activity_home.xml" value="0.1953125" />
         <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/activity_material.xml" value="0.1953125" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/activity_material1.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/activity_material2.xml" value="0.209375" />
         <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/activity_video.xml" value="0.1953125" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material1.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material2.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material2_part2.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material3.xml" value="0.1953125" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material4.xml" value="0.1953125" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material4_part2.xml" value="0.1953125" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material4_part3.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material5.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material5_part2.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material6.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material6_part2.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material7.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material7_part2.xml" value="0.1953125" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material7_part3.xml" value="0.1953125" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_first_material8.xml" value="0.209375" />
+        <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_second_material1.xml" value="0.209375" />
         <entry key="..\:/Users/fafir/StudioProjects/AyoBelajarEnergiSD/app/src/main/res/layout/fragment_youtube_player.xml" value="0.1953125" />
       </map>
     </option>

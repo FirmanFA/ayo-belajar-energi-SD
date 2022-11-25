@@ -15,9 +15,9 @@
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/home_background"
         android:gravity="center"
-        android:keepScreenOn="true"
-        android:background="@drawable/home_background">
+        android:keepScreenOn="true">
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -30,13 +30,13 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="28sp"
+            android:transitionName="btnMaterial"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="112:30"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.75"
-            android:transitionName="btnMaterial"/>
+            app:layout_constraintVertical_bias="0.75" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_quiz"
@@ -48,6 +48,7 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="28sp"
+            android:transitionName="btnQuiz"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="112:30"
             app:layout_constraintEnd_toEndOf="parent"

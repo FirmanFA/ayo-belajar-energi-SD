@@ -1,58 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fullscreen_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/fullscreenBackgroundColor"
+    android:background="@drawable/second_home_background"
     android:theme="@style/ThemeOverlay.AyoBelajarEnergiSD.FullscreenContainer"
     tools:context=".MainActivity">
 
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:rotationY="180"
+        app:layout_constraintBottom_toTopOf="@+id/btn_material1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.1"
+        app:srcCompat="@drawable/arrow" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:background="@drawable/second_home_background">
+        android:id="@+id/btn_material1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/material1_background"
+        android:transitionName="btnMaterial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="400:474"
+        app:layout_constraintEnd_toStartOf="@+id/btn_material2"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" >
 
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_material"
-            android:layout_width="210dp"
-            android:layout_height="0dp"
-            android:background="@drawable/material1_button"
-            android:fontFamily="@font/chewy"
-            android:paddingBottom="10dp"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:transitionName="btnMaterial"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="80:19"
-            app:layout_constraintEnd_toStartOf="@+id/btn_quiz"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_quiz"
-            android:layout_width="190dp"
-            android:layout_height="0dp"
-            android:background="@drawable/quiz_button"
-            android:fontFamily="@font/chewy"
-            android:paddingBottom="10dp"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_material"
-            app:layout_constraintDimensionRatio="112:30"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_material"
-            app:layout_constraintTop_toTopOf="@+id/btn_material"
-            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_material1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_material1"
+        app:layout_constraintHeight_percent="0.36"
+        app:layout_constraintStart_toStartOf="@+id/btn_material1"
+        app:layout_constraintTop_toTopOf="@+id/btn_material1"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/material1_asset" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_material2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/material2_background"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_material1"
+        app:layout_constraintDimensionRatio="400:474"
+        app:layout_constraintEnd_toStartOf="@+id/btn_material3"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_material1"
+        app:layout_constraintTop_toTopOf="@+id/btn_material1" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_material2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_material2"
+        app:layout_constraintHeight_percent="0.36"
+        app:layout_constraintStart_toStartOf="@+id/btn_material2"
+        app:layout_constraintTop_toTopOf="@+id/btn_material2"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/rocket" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_material3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/material3_background"
+        android:transitionName="btnQuiz"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_material2"
+        app:layout_constraintDimensionRatio="400:474"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_material2"
+        app:layout_constraintTop_toTopOf="@+id/btn_material2" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_material3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_material3"
+        app:layout_constraintHeight_percent="0.36"
+        app:layout_constraintStart_toStartOf="@+id/btn_material3"
+        app:layout_constraintTop_toTopOf="@+id/btn_material3"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/material3_asset" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

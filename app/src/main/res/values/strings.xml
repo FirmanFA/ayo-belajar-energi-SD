@@ -9,4 +9,6 @@
     <string name="title_activity_video">VideoActivity</string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="title_activity_material">MaterialActivity</string>
+    <string name="title_activity_material1">Material1Activity</string>
+    <string name="title_activity_material2">Material2Activity</string>
 </resources>

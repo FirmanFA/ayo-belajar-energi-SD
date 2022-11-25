@@ -9,6 +9,7 @@ import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.util.Pair
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowInsets
@@ -29,9 +30,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-
         binding.btnMaterial?.setOnClickListener {
 //            it.animateButton()
 
@@ -39,8 +37,10 @@ class MainActivity : AppCompatActivity() {
 
             val option = ActivityOptions.makeSceneTransitionAnimation(
                 this,
-                android.util.Pair(binding.btnMaterial, "btnMaterial")
+                Pair(binding.btnMaterial, "btnMaterial"),
+                Pair(binding.btnQuiz, "btnQuiz")
             )
+
             startActivity(intent, option.toBundle())
 
             clickMediaPlayer.start()
@@ -72,50 +72,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun View.animateButton() {
-
-        this.animate().apply {
-            scaleX(1.2f)
-            scaleY(1.2f)
-            duration = 100
-            scaleX(1f)
-            scaleY(1f)
-            duration = 100
-        }
-
-    }
-
-    private fun View.animateButton(motionEvent: MotionEvent) {
-        when (motionEvent.action) {
-            MotionEvent.ACTION_UP -> {
-                this.animate().apply {
-                    scaleX(1f)
-                    scaleY(1f)
-                    duration = 50
-                }
-
-                val visibleRect = Rect()
-                this.getGlobalVisibleRect(visibleRect)
-
-                val x = motionEvent.rawX.roundToInt()
-                val y = motionEvent.rawY.roundToInt()
-
-                if (visibleRect.contains(x, y)) {
-                    this.performClick()
-                }
-
-
-            }
-            MotionEvent.ACTION_DOWN -> {
-                this.animate().apply {
-                    this.scaleX(1.1f)
-                    scaleY(1.1f)
-                    duration = 50
-                }
-            }
-        }
-    }
-
     override fun onResume() {
         super.onResume()
 
@@ -132,20 +88,6 @@ class MainActivity : AppCompatActivity() {
                         View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
             }
 
-//            binding.fullscreenContent?.systemUiVisibility =
-//                View.SYSTEM_UI_FLAG_LOW_PROFILE or
-//                        View.SYSTEM_UI_FLAG_FULLSCREEN or
-//                        View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-//                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
-//                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
-//                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-
-
-            binding.fullscreenContent?.let {
-//                Log.d("fullscreenLog", "mlaku2")
-            }
         }
-
-
     }
 }

@@ -11,6 +11,7 @@ import android.view.View
 import android.view.WindowInsets
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.airbnb.lottie.LottieAnimationView
 import com.dz.ayobelajarenergi.databinding.ActivityFullscreenBinding
 
 /**
@@ -20,7 +21,7 @@ import com.dz.ayobelajarenergi.databinding.ActivityFullscreenBinding
 class FullscreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFullscreenBinding
-    private lateinit var fullscreenContent: TextView
+    private lateinit var fullscreenContent: LottieAnimationView
     private lateinit var fullscreenContentControls: LinearLayout
     private val hideHandler = Handler(Looper.myLooper()!!)
 
@@ -80,7 +81,7 @@ class FullscreenActivity : AppCompatActivity() {
         isFullscreen = true
 
         // Set up the user interaction to manually show or hide the system UI.
-        fullscreenContent = binding.fullscreenContent
+        fullscreenContent = binding.lottie
         fullscreenContent.setOnClickListener { toggle() }
 
         fullscreenContentControls = binding.fullscreenContentControls

@@ -2,16 +2,20 @@ package com.dz.ayobelajarenergi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
+import android.app.ActivityOptions
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Pair
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowInsets
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.dz.ayobelajarenergi.databinding.ActivityMaterialBinding
+import com.dz.ayobelajarenergi.material1.Material1Activity
 
 class MaterialActivity : AppCompatActivity() {
 
@@ -24,7 +28,31 @@ class MaterialActivity : AppCompatActivity() {
         binding = ActivityMaterialBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.btnMaterial1?.setOnClickListener {
+            val intent = Intent(this, Material1Activity::class.java)
+
+            val option = ActivityOptions.makeSceneTransitionAnimation(
+                this,
+                Pair(binding.btnMaterial1, "btnMaterial")
+            )
+
+            startActivity(intent, option.toBundle())
+        }
+
+        binding.btnMaterial1?.setOnTouchListener { view, motionEvent ->
+            view.animateButton(motionEvent)
+            true
+        }
+
+        binding.btnBack?.setOnClickListener {
+            onBackPressed()
+        }
+
+        binding.btnBack?.setOnTouchListener { view, motionEvent ->
+            view.animateButton(motionEvent)
+            true
+        }
+
 
     }
 
@@ -32,7 +60,7 @@ class MaterialActivity : AppCompatActivity() {
         super.onResume()
 
         if (Build.VERSION.SDK_INT >= 30) {
-            binding.fullscreenContent?.windowInsetsController?.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
+            binding.fullscreenContent.windowInsetsController?.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
         } else {
             window.decorView.apply {
                 systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE or
