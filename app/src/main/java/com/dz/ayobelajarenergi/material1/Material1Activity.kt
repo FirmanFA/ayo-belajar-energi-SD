@@ -5,6 +5,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowInsets
 import android.widget.Toast
@@ -44,11 +45,10 @@ class Material1Activity : AppCompatActivity() {
 
         binding.btnContinue?.setOnClickListener {
             val currentItem = binding.vpFirstMaterial?.currentItem?:0
-            if (currentItem != vpAdapter.itemCount){
+            if (currentItem != vpAdapter.itemCount-1){
                 binding.vpFirstMaterial?.currentItem = currentItem+1
             }else{
                 //move to materi 2
-                Toast.makeText(this, "test", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, Material2Activity::class.java)
                 startActivity(intent)
             }

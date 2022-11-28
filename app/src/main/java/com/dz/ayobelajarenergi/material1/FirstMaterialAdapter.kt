@@ -8,7 +8,7 @@ import com.dz.ayobelajarenergi.material1.content.*
 
 class FirstMaterialAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
-    override fun getItemCount() = 14
+    override fun getItemCount() = 15
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
@@ -43,15 +43,18 @@ class FirstMaterialAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycl
                 FirstMaterial6Fragment()
             }
             10->{
-                FirstMaterial7Fragment()
+                FirstMaterial6Part2Fragment()
             }
             11->{
-                FirstMaterial7Part2Fragment()
+                FirstMaterial7Fragment()
             }
             12->{
-                FirstMaterial7Part3Fragment()
+                FirstMaterial7Part2Fragment()
             }
             13->{
+                FirstMaterial7Part3Fragment()
+            }
+            14->{
                 FirstMaterial8Fragment()
             }
             else -> {

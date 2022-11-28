@@ -38,7 +38,7 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" >
+        app:layout_constraintVertical_bias="0.35">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -62,6 +62,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/material2_background"
+        android:transitionName="btnMaterial2"
         app:layout_constraintBottom_toBottomOf="@+id/btn_material1"
         app:layout_constraintDimensionRatio="400:474"
         app:layout_constraintEnd_toStartOf="@+id/btn_material3"

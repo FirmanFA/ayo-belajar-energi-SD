@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.dz.ayobelajarenergi.material1.content.*
+import com.dz.ayobelajarenergi.material2.content.*
 
 class SecondMaterialAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
@@ -14,31 +15,31 @@ class SecondMaterialAdapter(fragmentManager: FragmentManager, lifecycle: Lifecyc
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> {
-                FirstMaterial1Fragment()
+                SecondMaterial1Fragment()
             }
             1 -> {
-                FirstMaterial2Fragment()
+                SecondMaterial2Fragment()
             }
             2 -> {
-                FirstMaterial2Part2Fragment()
+                SecondMaterial3Fragment()
             }
             3 -> {
-                FirstMaterial3Fragment()
+                SecondMaterial4Fragment()
             }
             4->{
-                FirstMaterial4Fragment()
+                SecondMaterial5Fragment()
             }
             5->{
-                FirstMaterial4Part2Fragment()
+                SecondMaterial6Fragment()
             }
             6->{
-                FirstMaterial4Part3Fragment()
+                SecondMaterial7Fragment()
             }
             7->{
-                FirstMaterial5Fragment()
+                SecondMaterial8Fragment()
             }
             8->{
-                FirstMaterial5Part2Fragment()
+                SecondMaterial9Fragment()
             }
             9->{
                 FirstMaterial6Fragment()

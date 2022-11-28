@@ -16,6 +16,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.dz.ayobelajarenergi.databinding.ActivityMaterialBinding
 import com.dz.ayobelajarenergi.material1.Material1Activity
+import com.dz.ayobelajarenergi.material2.Material2Activity
 
 class MaterialActivity : AppCompatActivity() {
 
@@ -40,6 +41,22 @@ class MaterialActivity : AppCompatActivity() {
         }
 
         binding.btnMaterial1?.setOnTouchListener { view, motionEvent ->
+            view.animateButton(motionEvent)
+            true
+        }
+
+        binding.btnMaterial2?.setOnClickListener {
+            val intent = Intent(this, Material2Activity::class.java)
+
+            val option = ActivityOptions.makeSceneTransitionAnimation(
+                this,
+                Pair(binding.btnMaterial2, "btnMaterial2")
+            )
+
+            startActivity(intent, option.toBundle())
+        }
+
+        binding.btnMaterial2?.setOnTouchListener { view, motionEvent ->
             view.animateButton(motionEvent)
             true
         }

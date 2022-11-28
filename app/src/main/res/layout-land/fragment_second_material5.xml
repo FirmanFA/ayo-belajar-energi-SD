@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fadeScrollbars="false"
-    tools:context=".material1.content.FirstMaterial1Fragment">
+    android:fadeScrollbars="false">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -28,12 +27,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/img_information"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleY="1.4"
+            android:scaleX="1.4"
+            android:src="@drawable/ic_click_me"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Percobaan: Kertas Spiral yang Bergerak"
+            android:text="Percobaan: Pendulum Sederhana"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -50,8 +63,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:gravity="center_vertical"
-            android:justificationMode="inter_word"
-            android:text="Mari kita lakukan berbagai macam eksperimen untuk lebih memahami  transformasi energi. Guru kalian akan menyiapkan pos-pos belajar  mengenai transformasi energi. Baca dan ikuti instruksi yang ada  pada masing-masing percobaan. Catatlah hasil pengamatan pada  lembar kerja."
+            android:text="Mari kita mencoba membuat pendulum sederhana. Kalian akan
+melihat bagaimana ketinggian sebuah benda dan gaya gravitasi
+bisa menjadi sebuah energi potensial. Kalian juga akan mengamati
+bagaimana energi bisa ditransfer ke benda lainnya. "
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,30 +82,30 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="16dp"
-            android:src="@drawable/spiral_paper_image1"
+            android:src="@drawable/pendulum1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintDimensionRatio="10:3"
             app:layout_constraintEnd_toStartOf="@+id/imageView3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintWidth_percent="0.17" />
+            app:layout_constraintWidth_percent="0.4" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
-            android:src="@drawable/spiral_paper_image2"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/pendulum2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="@+id/imageView2"
             app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintWidth_percent="0.17" />
+            app:layout_constraintWidth_percent="0.4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

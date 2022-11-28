@@ -4,21 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fadeScrollbars="false"
-    tools:context=".material1.content.FirstMaterial1Fragment">
+    android:overScrollMode="never">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:overScrollMode="never"
-        tools:context=".material1.content.FirstMaterial1Fragment">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Transformasi Energi di Sekitar Kita"
+            android:text="Hasil Percobaan"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -27,38 +24,41 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:justificationMode="inter_word"
-            android:text="Manusia memanfaatkan energi dengan mengubah bentuknya  menjadi bentuk yang lain. Umumnya alat-alat buatan manusia  adalah alat untuk mengubah bentuk energi. Dalam aktivitas sehari-hari, banyak sekali perubahan energi yang terjadi di sekitar kita. "
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/img_lamp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/img_lamp"
-            app:layout_constraintTop_toTopOf="@+id/img_lamp" />
-
         <ImageView
-            android:id="@+id/img_lamp"
+            android:id="@+id/img_pendulum"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/ytp_pendulum"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintWidth_percent="0.3"
-            tools:src="@tools:sample/avatars" />
+            app:layout_constraintWidth_percent="0.25"
+            tools:src="@drawable/pendulum1" />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/ytp_pendulum"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_pendulum"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintWidth_percent="0.5"
+            app:videoId="0LnbyjOyEQ8" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
 </ScrollView>
-
