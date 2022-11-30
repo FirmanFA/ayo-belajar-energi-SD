@@ -42,19 +42,19 @@ class SecondMaterialAdapter(fragmentManager: FragmentManager, lifecycle: Lifecyc
                 SecondMaterial9Fragment()
             }
             9->{
-                FirstMaterial6Fragment()
+                SecondMaterial10Fragment()
             }
             10->{
-                FirstMaterial7Fragment()
+                SecondMaterial11Fragment()
             }
             11->{
-                FirstMaterial7Part2Fragment()
+                SecondMaterial12Fragment()
             }
             12->{
-                FirstMaterial7Part3Fragment()
+                SecondMaterial13Fragment()
             }
             13->{
-                FirstMaterial8Fragment()
+                SecondMaterial14Fragment()
             }
             else -> {
                 FirstMaterial1Fragment()
