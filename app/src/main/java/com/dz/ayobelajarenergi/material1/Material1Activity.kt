@@ -51,7 +51,12 @@ class Material1Activity : AppCompatActivity() {
                 //move to materi 2
                 val intent = Intent(this, Material2Activity::class.java)
                 startActivity(intent)
+                finish()
             }
+        }
+
+        binding.btnHome?.setOnClickListener {
+            onBackPressed()
         }
 
     }

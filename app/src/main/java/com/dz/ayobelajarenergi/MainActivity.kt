@@ -47,17 +47,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnQuiz?.setOnClickListener {
+            Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
             clickMediaPlayer.start()
+//
+//            val intent = Intent(this, VideoActivity::class.java)
+//
+//            val option = ActivityOptions.makeSceneTransitionAnimation(
+//                this,
+//                android.util.Pair(binding.btnQuiz, "openVideo")
+//            )
+//
+////            startActivity(intent, option.toBundle())
+//            startActivity(intent)
 
-            val intent = Intent(this, VideoActivity::class.java)
 
-            val option = ActivityOptions.makeSceneTransitionAnimation(
-                this,
-                android.util.Pair(binding.btnQuiz, "openVideo")
-            )
-
-//            startActivity(intent, option.toBundle())
-            startActivity(intent)
         }
 
         binding.btnMaterial?.setOnTouchListener { view, motionEvent ->

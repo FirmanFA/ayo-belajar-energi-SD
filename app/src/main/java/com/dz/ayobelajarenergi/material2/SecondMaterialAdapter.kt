@@ -57,7 +57,7 @@ class SecondMaterialAdapter(fragmentManager: FragmentManager, lifecycle: Lifecyc
                 SecondMaterial14Fragment()
             }
             else -> {
-                FirstMaterial1Fragment()
+                SecondMaterial1Fragment()
             }
         }
     }

@@ -2,6 +2,7 @@ package com.dz.ayobelajarenergi.material2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,7 @@ import android.view.WindowInsets
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.dz.ayobelajarenergi.databinding.ActivityMaterial2Binding
+import com.dz.ayobelajarenergi.material3.Material3Activity
 
 class Material2Activity : AppCompatActivity() {
 
@@ -31,6 +33,10 @@ class Material2Activity : AppCompatActivity() {
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
+        binding.btnHome?.setOnClickListener {
+            onBackPressed()
+        }
+
         binding.btnBack?.setOnClickListener {
             val currentItem = binding.vpSecondMaterial?.currentItem?:0
             if (currentItem != 0){
@@ -45,7 +51,9 @@ class Material2Activity : AppCompatActivity() {
             if (currentItem != vpAdapter.itemCount-1){
                 binding.vpSecondMaterial?.currentItem = currentItem+1
             }else{
-                //move to materi 3
+                val intent = Intent(this, Material3Activity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
 
@@ -56,7 +64,6 @@ class Material2Activity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        Log.d("onresumegan", "onresumegan")
 
         if (Build.VERSION.SDK_INT >= 30) {
             binding.fullscreenContent.windowInsetsController?.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())

@@ -91,7 +91,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/material3_background"
-        android:transitionName="btnQuiz"
+        android:transitionName="btnMaterial3"
         app:layout_constraintBottom_toBottomOf="@+id/btn_material2"
         app:layout_constraintDimensionRatio="400:474"
         app:layout_constraintEnd_toEndOf="parent"

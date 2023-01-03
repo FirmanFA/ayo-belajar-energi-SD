@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Percobaan 1: Kertas Spiral yang Bergerak"
+            android:text="Percobaan: Kertas Spiral yang Bergerak"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp"
