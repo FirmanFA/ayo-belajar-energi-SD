@@ -12,4 +12,8 @@
     <string name="title_activity_material1">Material1Activity</string>
     <string name="title_activity_material2">Material2Activity</string>
     <string name="title_activity_material3">Material3Activity</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="title_activity_quiz_container">QuizContainerActivity</string>
+    <string name="title_activity_quiz_result">QuizResultActivity</string>
+    <string name="title_activity_guide">GuideActivity</string>
 </resources>

@@ -3,6 +3,7 @@ package com.dz.ayobelajarenergi.material2
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,7 @@ import android.view.View
 import android.view.WindowInsets
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.dz.ayobelajarenergi.R
 import com.dz.ayobelajarenergi.databinding.ActivityMaterial2Binding
 import com.dz.ayobelajarenergi.material3.Material3Activity
 
@@ -18,6 +20,9 @@ class Material2Activity : AppCompatActivity() {
     lateinit var binding: ActivityMaterial2Binding
     private val vpAdapter by lazy {
         SecondMaterialAdapter(supportFragmentManager, lifecycle)
+    }
+    private val clickMediaPlayer: MediaPlayer by lazy {
+        MediaPlayer.create(this, R.raw.click_sound)
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -35,6 +40,7 @@ class Material2Activity : AppCompatActivity() {
 
         binding.btnHome?.setOnClickListener {
             onBackPressed()
+            clickMediaPlayer.start()
         }
 
         binding.btnBack?.setOnClickListener {
@@ -44,6 +50,7 @@ class Material2Activity : AppCompatActivity() {
             }else{
                 onBackPressed()
             }
+            clickMediaPlayer.start()
         }
 
         binding.btnContinue?.setOnClickListener {
@@ -55,6 +62,7 @@ class Material2Activity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
+            clickMediaPlayer.start()
         }
 
 

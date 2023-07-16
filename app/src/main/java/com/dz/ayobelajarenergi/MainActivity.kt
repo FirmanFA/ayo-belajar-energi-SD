@@ -14,7 +14,9 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.WindowInsets
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.dz.ayobelajarenergi.databinding.ActivityMainBinding
+import com.dz.ayobelajarenergi.quiz.QuizActivity
 import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +31,14 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+//        binding.imageView7?.let { Glide.with(this).asGif().load(R.raw.question_mark).into(it) }
+
+        binding.imageView7?.setOnClickListener {
+            // TODO - go to guide page
+            val intent = Intent(this, GuideActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnMaterial?.setOnClickListener {
 //            it.animateButton()
@@ -47,20 +57,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnQuiz?.setOnClickListener {
-            Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, QuizActivity::class.java)
+
+            val option = ActivityOptions.makeSceneTransitionAnimation(
+                this,
+                Pair(binding.btnQuiz, "btnQuiz")
+            )
+
+            startActivity(intent, option.toBundle())
+
             clickMediaPlayer.start()
-//
-//            val intent = Intent(this, VideoActivity::class.java)
-//
-//            val option = ActivityOptions.makeSceneTransitionAnimation(
-//                this,
-//                android.util.Pair(binding.btnQuiz, "openVideo")
-//            )
-//
-////            startActivity(intent, option.toBundle())
-//            startActivity(intent)
-
-
         }
 
         binding.btnMaterial?.setOnTouchListener { view, motionEvent ->

@@ -14,11 +14,43 @@
         android:theme="@style/Theme.AyoBelajarEnergiSD"
         tools:targetApi="31">
         <activity
+            android:name=".GuideActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_guide"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AyoBelajarEnergiSD.Fullscreen" />
+        <activity
+            android:name=".quiz.QuizResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_quiz_result"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AyoBelajarEnergiSD.Fullscreen" />
+        <activity
+            android:name=".quiz.QuizContainerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_quiz_container"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AyoBelajarEnergiSD.Fullscreen">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".quiz.QuizActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_quiz"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AyoBelajarEnergiSD.Fullscreen" />
+        <activity
             android:name=".material3.Material3Activity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
-            android:screenOrientation="sensorLandscape"
             android:label="@string/title_activity_material3"
+            android:screenOrientation="sensorLandscape"
             android:theme="@style/Theme.AyoBelajarEnergiSD.Fullscreen" />
         <activity
             android:name=".material2.Material2Activity"
@@ -68,6 +100,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

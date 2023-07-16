@@ -17,4 +17,9 @@
     <color name="red_primary">#EF476F</color>
     <color name="yellow_primary">#FFC43D</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="quiz_green">#30CF38</color>
+    <color name="quiz_blue">#3078CF</color>
+    <color name="quiz_red">#EA3354</color>
+    <color name="quiz_yellow">#CD9900</color>
+    <color name="quiz_dark_blue">#073b4c</color>
 </resources>

@@ -2,6 +2,7 @@ package com.dz.ayobelajarenergi.material3
 
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -28,6 +29,9 @@ class Material3Activity : AppCompatActivity() {
     private val vpAdapter by lazy {
         ThirdMaterialAdapter(supportFragmentManager, lifecycle)
     }
+    private val clickMediaPlayer: MediaPlayer by lazy {
+        MediaPlayer.create(this, R.raw.click_sound)
+    }
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -45,6 +49,7 @@ class Material3Activity : AppCompatActivity() {
 
         binding.btnHome?.setOnClickListener {
             onBackPressed()
+            clickMediaPlayer.start()
         }
 
         binding.btnBack?.setOnClickListener {
@@ -54,6 +59,7 @@ class Material3Activity : AppCompatActivity() {
             }else{
                 onBackPressed()
             }
+            clickMediaPlayer.start()
         }
 
         binding.btnContinue?.setOnClickListener {
@@ -63,6 +69,7 @@ class Material3Activity : AppCompatActivity() {
             }else{
                 onBackPressed()
             }
+            clickMediaPlayer.start()
         }
 
     }

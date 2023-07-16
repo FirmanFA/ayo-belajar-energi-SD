@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
 import android.app.ActivityOptions
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -23,6 +24,10 @@ class MaterialActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMaterialBinding
 
+    private val clickMediaPlayer: MediaPlayer by lazy {
+        MediaPlayer.create(this, R.raw.click_sound)
+    }
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +42,7 @@ class MaterialActivity : AppCompatActivity() {
                 this,
                 Pair(binding.btnMaterial1, "btnMaterial")
             )
+            clickMediaPlayer.start()
 
             startActivity(intent, option.toBundle())
         }
@@ -53,6 +59,7 @@ class MaterialActivity : AppCompatActivity() {
                 this,
                 Pair(binding.btnMaterial2, "btnMaterial2")
             )
+            clickMediaPlayer.start()
 
             startActivity(intent, option.toBundle())
         }
@@ -69,6 +76,7 @@ class MaterialActivity : AppCompatActivity() {
                 this,
                 Pair(binding.btnMaterial3, "btnMaterial3")
             )
+            clickMediaPlayer.start()
 
             startActivity(intent, option.toBundle())
         }
@@ -80,6 +88,7 @@ class MaterialActivity : AppCompatActivity() {
 
         binding.btnBack?.setOnClickListener {
             onBackPressed()
+            clickMediaPlayer.start()
         }
 
 //        binding.btnBack?.setOnTouchListener { view, motionEvent ->
