@@ -12,6 +12,7 @@ import android.view.WindowInsets
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.bumptech.glide.Glide
+import com.dz.ayobelajarenergi.MainActivity
 import com.dz.ayobelajarenergi.R
 import com.dz.ayobelajarenergi.databinding.ActivityQuizContainerBinding
 import com.dz.ayobelajarenergi.model.AnswerChoice
@@ -38,6 +39,19 @@ class QuizContainerActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         updateQuestion()
+
+        binding.btnBack?.setOnClickListener {
+            onBackPressed()
+            clickMediaPlayer.start()
+        }
+
+        binding.btnHome?.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+            finish()
+            clickMediaPlayer.start()
+        }
 
         binding.btnContinue?.setOnClickListener {
             if (isAnswered){

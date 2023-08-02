@@ -25,6 +25,10 @@ class QuizActivity : AppCompatActivity() {
         binding = ActivityQuizBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnBack?.setOnClickListener {
+            onBackPressed()
+        }
+
         binding.btnContinue?.setOnClickListener {
             val intent = Intent(this, QuizContainerActivity::class.java)
             startActivity(intent)

@@ -8,6 +8,7 @@ import android.graphics.Rect
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
+import android.provider.MediaStore.Audio.Media
 import android.util.Log
 import android.util.Pair
 import android.view.MotionEvent
@@ -23,20 +24,52 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private var backgroundMediaPlayer: MediaPlayer? = null
+
+    companion object{
+        var isMusicOn = true
+    }
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        backgroundMediaPlayer = MediaPlayer.create(this, R.raw.background_music)
+
+        // Set the music to loop continuously
+        backgroundMediaPlayer?.isLooping = true
+
+        // Start playing the background music
+        backgroundMediaPlayer?.start()
+
 
         val clickMediaPlayer = MediaPlayer.create(this, R.raw.click_sound)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.imgSound?.setOnClickListener {
+            isMusicOn = !isMusicOn
+            if(isMusicOn){
+                binding.imgSound?.setImageResource(R.drawable.sound_on)
+                backgroundMediaPlayer?.start()
+            }else{
+                binding.imgSound?.setImageResource(R.drawable.no_sound)
+                backgroundMediaPlayer?.pause()
+            }
+        }
+
 //        binding.imageView7?.let { Glide.with(this).asGif().load(R.raw.question_mark).into(it) }
 
         binding.imageView7?.setOnClickListener {
             // TODO - go to guide page
             val intent = Intent(this, GuideActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.imgCopyright?.setOnClickListener {
+            // TODO - go to guide page
+            val intent = Intent(this, CopyrightActivity::class.java)
             startActivity(intent)
         }
 
@@ -82,8 +115,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        backgroundMediaPlayer?.pause()
+        super.onBackPressed()
+    }
+
     override fun onResume() {
         super.onResume()
+
+        backgroundMediaPlayer?.start()
 
         if (Build.VERSION.SDK_INT >= 30) {
             binding.fullscreenContent?.windowInsetsController?.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
@@ -99,5 +139,13 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        // Release resources and stop the music when the app is closed
+        backgroundMediaPlayer?.stop()
+        backgroundMediaPlayer?.release()
+        backgroundMediaPlayer = null
     }
 }

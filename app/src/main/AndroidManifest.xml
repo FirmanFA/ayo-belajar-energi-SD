@@ -14,6 +14,13 @@
         android:theme="@style/Theme.AyoBelajarEnergiSD"
         tools:targetApi="31">
         <activity
+            android:name=".CopyrightActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_copyright"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AyoBelajarEnergiSD.Fullscreen" />
+        <activity
             android:name=".GuideActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
